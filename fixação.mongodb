@@ -1,0 +1,4 @@
+//sempre que usar o find, considerar o seguinte 
+//.find()
+//dentro dele vem {} primeiro o filtro, mostrando o que deve ser exibido e quais criterios
+//depois o segundo {} representa a exibição, mostrando o que deve ser inserido 
