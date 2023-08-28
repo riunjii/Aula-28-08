@@ -1,0 +1,39 @@
+//retornando todas as colunas e todos os registros
+use('Geografico')
+db.estados.find()
+
+//retornando apenas a sigla e o uf e o nome do estado
+use('Geografico')
+db.estados.find({},{_id:0, uf:1, nome:1})
+
+use('Geografico')
+db.estados.find({}, {_id:0, uf:1, nome:1})
+          .sort({nome:1})
+
+//Todos os estados que comecem com Rio
+use ('Geografico')
+db.estados.find({nome: /^Rio/i},{_id:0, uf:1, nome:1})
+ 
+
+//Todos os estados que terminem com Sul
+use ('Geografico')
+db.estados.find({nome: /Sul$/i},{_id:0, uf:1, nome:1})
+
+ 
+
+//Todos os estados que contenham a palavra grosso
+use ('Geografico')
+db.estados.find({nome: /grosso/i},{_id:0, uf:1, nome:1})
+
+
+
+//Todos os municipios que terminam em Tu
+use ('Geografico')
+db.municipios.find({nome: /tu$/i},
+                   {_id:0, nome:1, capital:1})
+                   .sort({nome: 1})
+                   .skip(5)//pula os 5 primeiros registros
+                   .limit(5)//limita o retorno de 5 registros
+
+use('Geografico')
+
